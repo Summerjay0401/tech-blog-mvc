@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 
 const conn = require("../config/connection");
-const User = require("./User");
-const Comment = require("./Comment");
 
 class Post extends Model {
 }
@@ -33,20 +31,11 @@ Post.init(
         },
     },
     {
-        conn,
+        sequelize: conn,
         freezeTableName: true,
         underscored: true,
         modelName: "post",
     }
 );
-
-Post.belongsTo(User, {
-    foreignKey: "user_id",
-});
-
-Post.hasMany(Comment, {
-    foreignKey: "post_id",
-    onDelete: "CASCADE",
-});
 
 module.exports = Post;
