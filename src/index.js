@@ -9,19 +9,20 @@ const routes = require("./routes");
 const session = require("./config/session");
 
 const helpers = require("./utils/helpers");
-const handlebars = handlebars.create({ helpers });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(session);
 
-app.engine("handlebars", handlebars.engine);
+const hbs = handlebars.create({ helpers });
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
