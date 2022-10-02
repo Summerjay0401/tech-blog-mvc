@@ -1,0 +1,20 @@
+[
+    {
+        "username": "sjrosal",
+        "email": "summerjadefrosal@gmail.com",
+        "password": "12345",
+        "isAdmin": "true"
+    },
+    {
+        "username": "rjrimorin",
+        "email": "rjrimorin@gmail.com",
+        "password": "12345",
+        "isAdmin": "false"
+    },
+    {
+        "username": "noacloud",
+        "email": "ncrimorin@gmail.com",
+        "password": "12345",
+        "isAdmin": "false"
+    }
+]
