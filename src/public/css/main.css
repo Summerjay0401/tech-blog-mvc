@@ -6,3 +6,33 @@
     margin: 16px;
     padding: 16px;
 }
+
+form {
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 8px;
+}
+
+form input {
+    padding: 8px;
+    margin: 0 0 16px 0;
+}
+
+form button {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+form a {
+    margin: auto;
+    text-decoration: none;
+}
+
+form a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
