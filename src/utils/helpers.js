@@ -1,12 +1,6 @@
 module.exports = {
     format_time: (date) => {
-        return date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-        });
+        return date.toLocaleDateString("en-US");
     },
     format_summary: (content) => {
         if (content.length > 300) {

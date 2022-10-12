@@ -1,9 +1,22 @@
+const { Op } = require('sequelize');
+
+const {
+    Comment,
+    Post,
+    User
+} = require('../models');
+
+const {
+    getAllPosts
+} = require("./api/posts-controller");
+
 const homeView = async (req, res) => {
     try {
-
-        res.render("home");
+        const posts = await getAllPosts();
+        res.render("home", {
+            posts
+        });
     } catch (err) {
-        console.log(err);
         res.status(500).json(err);
     }
 };
