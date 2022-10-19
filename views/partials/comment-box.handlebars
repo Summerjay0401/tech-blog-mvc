@@ -7,6 +7,8 @@
         </div>
     </div>
     <div class="card-content">
+        {{> comment-input}}
+
         {{#each comments as |content|}}
             {{> comment content=content}}
         {{/each}}

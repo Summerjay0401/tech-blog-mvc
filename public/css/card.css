@@ -24,7 +24,7 @@
     cursor:pointer;  
 }
 
-.card-header-timestamp {
+.card-header-timestamp, .card-header-buttons {
     margin: auto 0px;
 }
 
