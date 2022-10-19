@@ -1,4 +1,7 @@
 <div class="page-container ">
+    
+    {{> page-title title="The Tech Blog" }}
+
     {{#each posts as |post|}}
         {{> post-card post=post}}
     {{/each}}

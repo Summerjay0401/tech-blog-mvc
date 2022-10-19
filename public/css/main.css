@@ -7,6 +7,10 @@
     padding: 16px;
 }
 
+h1.heading {
+    margin-bottom: 16px;
+}
+
 form {
     width: 100%;
 }

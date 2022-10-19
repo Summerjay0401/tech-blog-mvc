@@ -12,13 +12,13 @@
     color: #fff;
 }
 
-.card-header-title > h1 > a {
+.card-header-title > h3 > a {
     color: #fff;
     text-decoration: none;
 }
 
     
-.card-header-title > h1 > a:hover {
+.card-header-title > h3 > a:hover {
     color:#00A0C6; 
     text-decoration:none; 
     cursor:pointer;  

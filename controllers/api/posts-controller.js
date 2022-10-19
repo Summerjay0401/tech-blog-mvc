@@ -25,6 +25,31 @@ const getAllPosts = async () => {
     }
 } 
 
+const getPostById = async (id) => {
+    try {
+        const post = await Post.findOne({
+            where: {
+                id: id
+            },
+            include: [
+                {
+                    model: User
+                },
+                {
+                    model: Comment
+                }
+            ],
+            order: [['createdAt', 'DESC']],
+        });
+
+        return post;
+
+    } catch (err) {
+        throw err;
+    }
+} 
+
 module.exports = {
-    getAllPosts
+    getAllPosts,
+    getPostById
 }

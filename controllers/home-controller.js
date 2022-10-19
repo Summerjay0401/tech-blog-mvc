@@ -8,12 +8,15 @@ const {
 
 const {
     getAllPosts
-} = require("./api/posts-controller");
+} = require('./api/posts-controller');
 
 const homeView = async (req, res) => {
     try {
+        
         const posts = await getAllPosts();
-        res.render("home", {
+
+        res.render('home', {
+            pageTitle: 'Home',
             posts
         });
     } catch (err) {

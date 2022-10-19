@@ -1,7 +1,9 @@
 <div class="card">
     <div class="card-header">
         <div class="card-header-title">
-            <h1><a href="/posts/{{post.id}}">{{post.title}}</a></h1>
+            <h3>
+                <a href="/posts/{{post.id}}">{{post.title}}</a>
+            </h3>
         </div>
         <div class="card-header-timestamp">
             Posted by <strong>{{post.user.username}}</strong> on <strong>{{format_time post.createdAt}}</strong>
