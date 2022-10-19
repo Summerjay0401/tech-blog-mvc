@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="/css/comment.css" />
+
 <div class="page-container ">
     
-    {{> page-title title="Blog Post" }}
+    {{> page-title title="The Tech Blog" }}
 
-    {{!-- {{#each posts as |post|}}
-        {{> post-card post=post}}
-    {{/each}} --}}
+    {{> post-card post=post}}
+
+    {{> comment-box comments=post.comments}}
 
 </div>

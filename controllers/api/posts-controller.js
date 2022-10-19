@@ -36,7 +36,12 @@ const getPostById = async (id) => {
                     model: User
                 },
                 {
-                    model: Comment
+                    model: Comment,
+                    include: [
+                        {
+                            model: User
+                        }
+                    ],
                 }
             ],
             order: [['createdAt', 'DESC']],

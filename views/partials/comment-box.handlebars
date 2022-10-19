@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        <div class="card-header-title">
+            <h3>
+                Comments
+            </h3>
+        </div>
+    </div>
+    <div class="card-content">
+        {{#each comments as |content|}}
+            {{> comment content=content}}
+        {{/each}}
+    </div>
+</div>
