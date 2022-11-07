@@ -27,3 +27,21 @@
     display: inline-flex;
     width: 100%;
 }
+
+.comment-button-container {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.comment-button-container.hide {
+    display: none;
+}
+
+.comment-button-container button {
+    padding: 0 16px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    border-radius: 18px;
+    margin-left: 8px;
+}

@@ -1,9 +1,11 @@
 const router = require("express").Router();
 
 const {
-    homeView
-} = require("../controllers/api/auth-controller");
+    login,
+    signup
+} = require("../../controllers/api/auth-controller");
 
-router.get("/", homeView);
+router.post("/login", login);
+router.post("/signup", signup);
 
 module.exports = router;

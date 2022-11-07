@@ -15,7 +15,7 @@ const appRoutes = require("./app-routes");
 const postsRoutes = require("./posts-routes");
 
 router.use("/", appRoutes);
-// router.use("/api", apiRoutes);
+router.use("/api", apiRoutes);
 router.use("/posts", postsRoutes);
 router.get("/dashboard", dashboardView);
 router.get("/login", loginView);

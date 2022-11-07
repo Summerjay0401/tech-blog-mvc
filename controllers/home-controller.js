@@ -16,6 +16,8 @@ const homeView = async (req, res) => {
         const posts = await getAllPosts();
 
         res.render('home', {
+            loggedIn: req.session.loggedIn,
+            loggedInUserData: req.session.loggedInUserData,
             pageTitle: 'Home',
             posts
         });
