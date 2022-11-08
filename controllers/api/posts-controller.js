@@ -41,10 +41,12 @@ const getPostById = async (id) => {
                         {
                             model: User
                         }
-                    ],
+                    ]
                 }
             ],
-            order: [['createdAt', 'DESC']],
+            order: [
+                ['createdAt', 'DESC']
+            ]
         });
 
         return post;

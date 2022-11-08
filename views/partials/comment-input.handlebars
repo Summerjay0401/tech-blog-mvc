@@ -1,10 +1,16 @@
 <div class="comment-content">
-    <div class="comment-input-container">
-        <div class="commenter-avatar"></div>
-        <input id="comment-input" class="comment-input" placeholder="Add a comment..."/>
-    </div>
-    <div id="comment-button-container" class="comment-button-container hide">
-        <button id="comment-button-cancel" class="comment-button-cancel">Cancel</button>
-        <button id="comment-button-comment" class="comment-button-comment">Comment</button>
-    </div>
+        
+        <div class="comment-input-container">
+            <div class="commenter-avatar"></div>
+           
+            <input id="post-id" value="{{postId}}" type="hidden" />
+            <input id="comment-input" class="comment-input" placeholder="Add a comment..."/>
+
+        </div>
+        
+        <div id="comment-button-container" class="comment-button-container hide">
+            <button type="button" id="comment-button-cancel" class="comment-button-cancel">Cancel</button>
+            <button type="button" id="comment-button-comment" class="comment-button-comment">Comment</button>
+        </div>
+
 </div>

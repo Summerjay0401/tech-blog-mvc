@@ -7,7 +7,9 @@
         </div>
     </div>
     <div class="card-content">
-        {{> comment-input}}
+        {{#if loggedIn}}
+            {{> comment-input postId=postId}}
+        {{/if}}
 
         {{#each comments as |content|}}
             {{> comment content=content}}

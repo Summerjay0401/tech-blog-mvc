@@ -8,6 +8,8 @@ const postView = async (req, res) => {
         const post = await getPostById(req.params.id);
         
         res.render('post', {
+            loggedIn: req.session.loggedIn,
+            loggedInUserData: req.session.loggedInUserData,
             pageTitle: 'Post',
             post: post.get({ plain: true })
         });
