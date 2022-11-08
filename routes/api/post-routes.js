@@ -1,11 +1,13 @@
 const router = require("express").Router();
 
 const {
-    createPostView,
-    editPostView,
-} = require("../../controllers/post-controller");
+    createPost,
+    deletePost,
+    editPost,
+} = require("../../controllers/api/posts-controller");
 
-router.get("/create", createPostView);
-router.get("/edit/:id", editPostView);
+router.post("/create", createPost);
+router.put("/edit/:id", editPost);
+router.delete("/delete/:id", editPost);
 
 module.exports = router;

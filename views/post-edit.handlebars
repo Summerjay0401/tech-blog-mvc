@@ -16,11 +16,11 @@
         </div>
         <div class="card-content">
             <form id="form-edit-post" class="form-post">  
+                <input type="hidden" name="id" value="{{post.id}}">
                 <label>Title</label>   
-                <input type="text" placeholder="Enter title" name="title" required>  
+                <input type="text" placeholder="Enter title" name="title" value="{{post.title}}" required>  
                 <label>Content</label>   
-                <textarea placeholder="Enter content" name="content" required rows="6">
-                </textarea>
+                <textarea placeholder="Enter content" name="content" required rows="6">{{post.content}}</textarea>
                 <button id="button-post-update" type="submit">Update Post</button>   
                 <button id="button-post-delete" type="button">Delete Post</button>  
             </form> 
@@ -29,4 +29,4 @@
 
 </div>
 
-<script src="js/post.edit.js"></script>
+<script src="/js/post.edit.js"></script>

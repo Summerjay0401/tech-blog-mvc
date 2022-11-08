@@ -21,8 +21,6 @@ const postView = async (req, res) => {
 
 const createPostView = async (req, res) => {
     try {
-        console.log("awdawkbdkjwahdkjawhdjakdhwajkhdn")
-        console.log(req.body)
         res.render('post-create', {
             loggedIn: req.session.loggedIn,
             loggedInUserData: req.session.loggedInUserData,
@@ -37,11 +35,13 @@ const createPostView = async (req, res) => {
 
 const editPostView = async (req, res) => {
     try {
-        console.log(req.params)
+        const post = await getPostById(req.params.id);
+        console.log(post.get({ plain: true }))
         res.render('post-edit', {
             loggedIn: req.session.loggedIn,
             loggedInUserData: req.session.loggedInUserData,
             pageTitle: 'Edit Post',
+            post: post.get({ plain: true })
         });
 
     } catch (err) {

@@ -9,4 +9,7 @@ module.exports = {
             return content;
         }
     },
+    check: (value, comparator) => {
+        return (value === comparator) ? 'You must be logged in to view your dashboard!' : '';
+    }
 };

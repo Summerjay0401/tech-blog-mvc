@@ -2,10 +2,15 @@
     
     <div class="page-heading">
         {{> page-title title="My Dashboard" }}
-        <button>
-            <a type="button" href="/posts/create">+ New Post</a>
-        </button>
+        {{#if loggedIn}}
+            <button>
+                <a type="button" href="/posts/create">+ New Post</a>
+            </button>
+        {{/if}}
     </div>
+
+    {{#check loggedIn undefined}}
+    {{/check}}
 
     <div>
         {{#each posts as |post|}}

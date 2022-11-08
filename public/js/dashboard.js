@@ -1,5 +1,6 @@
 const newPostButton = document.getElementById("new-post");
 
-newPostButton.addEventListener('click', () => {
-    document.location.replace("/posts/create");
-});
+if(newPostButton)
+    newPostButton.addEventListener('click', () => {
+        document.location.replace("/posts/create");
+    });

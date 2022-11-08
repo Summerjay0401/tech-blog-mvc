@@ -1,3 +1,4 @@
+const { where } = require('sequelize');
 const {
     Comment,
     Post,
@@ -79,8 +80,59 @@ const getPostById = async (id) => {
         throw err;
     }
 } 
+const createPost = async (req, res) => {
+    try {
+        const post = await Post.create({
+            title: req.body.title,
+            content: req.body.content,
+            user_id: req.session.loggedInUserData.id
+        });
+
+        return res.status(200).json(post);
+
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+} 
+const editPost = async (req, res) => {
+    try {
+        const comment = await Post.update({
+            title: req.body.title,
+            content: req.body.content,
+        }, {
+            where: {
+                id: req.params.id,
+                user_id: req.session.loggedInUserData.id
+            }
+        });
+
+        return res.status(200).json(comment);
+
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+} 
+const deletePost = async (req, res) => {
+    try {
+        const post = await Post.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        return post;
+
+    } catch (err) {
+        throw err;
+    }
+} 
 
 module.exports = {
+    createPost,
+    editPost,
+    deletePost,
     getAllPosts,
     getMyPosts,
     getPostById

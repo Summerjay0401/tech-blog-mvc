@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
     const data = new FormData(e.target);
 
     const obj = Object.fromEntries(data);
-
+    
     const response = await fetch('/api/posts/create', {
         method: 'POST',
         body: JSON.stringify(obj),
