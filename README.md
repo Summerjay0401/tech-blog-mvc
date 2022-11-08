@@ -6,15 +6,13 @@ Create an account (Required to see dashboard functionality!)
 
 ## Installation
 
-get the node package dependencies
-`npm i`
-update the file with your database credentials
-`.env.EXAMPLE` to `.env`
-In your mysql cli
-run the script to generate the `blog_db` database using the `./db/schema.sql`
-`npm run seed` to generate the tables and seeds
-`npm run dev` to run the server with nodemon or
-`npm run start` for a normal server start
+- get the node package dependencies -> `npm i`
+- update the file with your database credentials
+- `.env.EXAMPLE` to `.env`
+- In your mysql cli, run the script to generate the `blog_db` database using the `./db schema.sql`
+- `npm run seed` to generate the tables and seeds
+- `npm run dev` to run the server with nodemon or
+- `npm run start` for a normal server start
 
 ## Screenshots
 
@@ -25,6 +23,10 @@ run the script to generate the `blog_db` database using the `./db/schema.sql`
 ### Dashboard / CRUD for Posts
 
 ![dashboard screenshot](./assets/dashboard.png)
+
+### Create
+
+# ![create screenshot](./assets/create.png)
 
 ### Edit Post
 
@@ -42,6 +44,4 @@ run the script to generate the `blog_db` database using the `./db/schema.sql`
 
 ![login screenshot](./assets/login.png)
 
-### Logout
-
-# ![logout screenshot](./assets/logout.png)
+By: Summer Jade
