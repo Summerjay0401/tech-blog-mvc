@@ -1,7 +1,7 @@
 const loginView = async (req, res) => {
     try {
         res.render("login", {
-            
+            pageTitle: 'Login',
         });
     } catch (err) {
         res.status(500).json(err);
@@ -26,7 +26,7 @@ const logoutView = async (req, res) => {
 const signupView = async (req, res) => {
     try {
         res.render("signup", {
-            
+            pageTitle: 'Signup',
         });
     } catch (err) {
         res.status(500).json(err);

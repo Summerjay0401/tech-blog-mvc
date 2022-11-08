@@ -10,6 +10,7 @@ const dashboardView = async (req, res) => {
             posts = await getMyPosts(req.session.loggedInUserData.id);
         
         res.render("dashboard", {
+            pageTitle: 'My Dashboard',
             loggedIn: req.session.loggedIn,
             loggedInUserData: req.session.loggedInUserData,
             posts

@@ -116,16 +116,17 @@ const editPost = async (req, res) => {
 } 
 const deletePost = async (req, res) => {
     try {
-        const post = await Post.destroy({
+        await Post.destroy({
             where: {
                 id: req.params.id
             }
         });
 
-        return post;
+        return res.status(404).json("Deleted");
 
     } catch (err) {
-        throw err;
+        console.log(err);
+        return res.status(500).json(err);
     }
 } 
 

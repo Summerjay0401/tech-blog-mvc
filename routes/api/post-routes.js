@@ -8,6 +8,6 @@ const {
 
 router.post("/create", createPost);
 router.put("/edit/:id", editPost);
-router.delete("/delete/:id", editPost);
+router.delete("/delete/:id", deletePost);
 
 module.exports = router;
