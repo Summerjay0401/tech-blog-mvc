@@ -1,5 +1,18 @@
 <div class="page-container ">
     
-    {{> page-title title="Dashboard" }}
+    <div class="page-heading">
+        {{> page-title title="My Dashboard" }}
+        <button>
+            <a type="button" href="/posts/create">+ New Post</a>
+        </button>
+    </div>
+
+    <div>
+        {{#each posts as |post|}}
+            {{> my-post-card post=post}}
+        {{/each}}
+    </div>
 
 </div>
+
+<script src="js/dashboard.js"></script>

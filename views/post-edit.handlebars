@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/post-page.css" />
+
+<div class="page-container ">
+    
+    <div class="page-heading">
+        {{> page-title title="My Dashboard" }}
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-header-title">
+                <h3>
+                    Edit Post
+                </h3>
+            </div>
+        </div>
+        <div class="card-content">
+            <form id="form-edit-post" class="form-post">  
+                <label>Title</label>   
+                <input type="text" placeholder="Enter title" name="title" required>  
+                <label>Content</label>   
+                <textarea placeholder="Enter content" name="content" required rows="6">
+                </textarea>
+                <button id="button-post-update" type="submit">Update Post</button>   
+                <button id="button-post-delete" type="button">Delete Post</button>  
+            </form> 
+        </div>
+    </div>
+
+</div>
+
+<script src="js/post.edit.js"></script>

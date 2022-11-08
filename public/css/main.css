@@ -7,6 +7,25 @@
     padding: 16px;
 }
 
+.page-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-heading button {
+    padding: 0 16px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    border-radius: 18px;
+    margin-left: 8px;
+}
+
+.page-heading button a {
+    text-decoration: none;
+}
+
 h1.heading {
     margin-bottom: 16px;
 }

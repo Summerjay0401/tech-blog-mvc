@@ -25,6 +25,30 @@ const getAllPosts = async () => {
     }
 } 
 
+const getMyPosts = async (userId) => {
+    try {
+        const postData = await Post.findAll({
+            where: {
+                user_id: userId
+            },
+            include: [
+                {
+                    model: User
+                },
+                {
+                    model: Comment
+                }
+            ],
+            order: [['createdAt', 'DESC']],
+        });
+
+        return postData.map((post) => post.get({ plain: true }));
+
+    } catch (err) {
+        throw err;
+    }
+} 
+
 const getPostById = async (id) => {
     try {
         const post = await Post.findOne({
@@ -58,5 +82,6 @@ const getPostById = async (id) => {
 
 module.exports = {
     getAllPosts,
+    getMyPosts,
     getPostById
 }
